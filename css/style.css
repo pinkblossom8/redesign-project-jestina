@@ -22,7 +22,7 @@ body, ul, li {
 /* 라이브러리 */
 
 .con {
-  width:100%;
+  width:auto;
   max-width:1200px;
   margin:0 auto;
 }
@@ -81,6 +81,7 @@ header .top-header {
 .header__menu {
   text-align: center;
   margin-top:24px;
+  width:100%;
 }
 
 .header__menu > ul {
@@ -118,7 +119,7 @@ header .top-header {
   transform:translatex(-50%);
   background-color:#FFF;
   /* border:3px solid red; */
-  width:118px;
+  width:120px;
   font-size:14px;
   padding:6px 18px;
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.150);
@@ -137,5 +138,13 @@ header .top-header {
 
 .header__menu > ul ul > li:hover > a {
   color:#FFB2B8;
+}
+}
+
+/* 슬라이드 */
+
+.slider-box-1 .swiper {
+  height: 800px;
+  width: 1200px;
 }
 }
