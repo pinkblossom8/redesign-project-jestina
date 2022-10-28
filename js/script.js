@@ -1,7 +1,6 @@
 function SliderBox1__init() {
   const swiper = new Swiper(".slider-box-1 .swiper", {
     // Optional parameters
-    direction: "vertical",
     loop: true,
 
     // If we need pagination
@@ -18,6 +17,11 @@ function SliderBox1__init() {
     // And if we need scrollbar
     scrollbar: {
       el: ".slider-box-1 .swiper-scrollbar"
+    },
+
+    autoplay: {
+      delay: 5000, // 5초마다 슬라이드 넘김
+      disableOnInteraction : false, // 자동 재생 중 건드려도 비활성화되지 않음
     }
   });
 }
