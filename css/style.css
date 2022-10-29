@@ -7,27 +7,29 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif ,'Noto Sans KR', sans-serif;
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   /* font-family: 'Roboto', sans-serif; */
 }
 
 /* 노멀라이즈 */
 a {
-  color:inherit;
-  text-decoration:none;
+  color: inherit;
+  text-decoration: none;
 }
 
-body, ul, li {
-  list-style:none;
-  margin:0;
-  padding:0;
+body,
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* 라이브러리 */
 
 .con {
-  min-width:1200px;
-  margin:0 auto;
+  min-width: 1200px;
+  margin: 0 auto;
 }
 
 /* 커스텀 */
@@ -35,114 +37,115 @@ body, ul, li {
 /* top-header */
 
 .header__inner {
-  border-top:4px solid #FFB2B8;
-  border-bottom:1px solid #FFB2B8;
+  border-top: 4px solid #FFB2B8;
+  border-bottom: 1px solid #FFB2B8;
 }
 
 header .top-header {
   /* border:3px solid red; */
   /* height:129px; */
-  margin-top:20px;
-  display:flex;
-  width:1200px;
+  margin-top: 20px;
+  display: flex;
+  width: 1200px;
 }
 
 .top-header .top-header__empty {
-  flex:1 1 0%;
+  flex: 1 1 0%;
 }
 
 .top-header .top-header__logo {
   /* border:3px solid green; */
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
 }
 
-.top-header .top-header__logo > img {
+.top-header .top-header__logo>img {
   /* border:3px solid blue; */
 }
 
 
 .top-header .top-header__btn {
-  flex:1 1 0%;
+  flex: 1 1 0%;
   /* border:3px solid pink; */
-  display:flex;
-  justify-content:flex-end;
-/*   margin-top:20px; */
+  display: flex;
+  justify-content: flex-end;
+  /*   margin-top:20px; */
 }
 
 .top-header .top-header__btn-wrap {
-  display:flex;
-  padding:0 4px;
+  display: flex;
+  padding: 0 4px;
   /* border:3px solid red; */
 }
 
-.top-header .top-header__btn-wrap > div {
-  margin:0 0 0 12px;
+.top-header .top-header__btn-wrap>div {
+  margin: 0 0 0 12px;
 }
 
 /* header__menu */
 
 .header__menu {
   text-align: center;
-  margin-top:24px;
-  width:100%;
+  margin-top: 24px;
+  width: 100%;
 }
 
-.header__menu > ul {
-  display:inline-block;
-  font-size:18px;
+.header__menu>ul {
+  display: inline-block;
+  font-size: 18px;
   font-weight: 600;
-  color:#222;
+  color: #222;
 }
 
-.header__menu > ul > li {
-  display:inline-block;
-  position:relative;
-  margin:0 40px;
+.header__menu>ul>li {
+  display: inline-block;
+  position: relative;
+  margin: 0 40px;
   /* border:3px solid blue; */
-  padding:12px;
+  padding: 12px;
   padding-bottom: 24px;
 }
 }
-.header__menu > ul > li > a {
+
+.header__menu>ul>li>a {
   display: block;
 }
 
-.header__menu > ul > li:hover > a {
-  color:#F06278;
+.header__menu>ul>li:hover>a {
+  color: #F06278;
   /* border-bottom: 1px solid #FFB2B8; */
 }
 
 /* 2차메뉴 */
 
-.header__menu > ul > li > ul {
+.header__menu>ul>li>ul {
   position: absolute;
   display: none;
   top: 100%;
   left: 50%;
-  transform:translatex(-50%);
-  background-color:#FFF;
+  transform: translatex(-50%);
+  background-color: #FFF;
   /* border:3px solid red; */
-  width:120px;
-  font-size:14px;
-  padding:6px 18px;
+  width: 120px;
+  font-size: 14px;
+  padding: 6px 18px;
   box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.150);
-  font-weight: 600;
+  font-weight: 500;
   z-index: 100;
 }
 
-.header__menu > ul > li:hover > ul {
+.header__menu>ul>li:hover>ul {
   display: block;
   border-bottom: 1px solid #FFB2B8;
 }
 
-.header__menu > ul ul > li {
-  margin:12px;
+.header__menu>ul ul>li {
+  margin: 12px;
   /* border:3px solid blue; */
 }
 
-.header__menu > ul ul > li:hover > a {
-  color:#FFB2B8;
+.header__menu>ul ul>li:hover>a {
+  color: #FFB2B8;
 }
 }
 
@@ -154,43 +157,43 @@ header .top-header {
 
 /* 스와이퍼 메인 컨테이너는 반!드!시! 높이가 지정되어 있어야 한다. */
 .slider-box-1 .swiper {
-height:800px;
-/* border:3px solid blue; */
+  height: 800px;
+  /* border:3px solid blue; */
 }
 
 .slider-box-1 .swiper-button-prev,
 .slider-box-1 .swiper-button-next {
-position:static;
-margin-top:0;
+  position: static;
+  margin-top: 0;
 }
 
 .slider-box-1 {
-position:relative;
-/* border:3px solid gold; */
-cursor: pointer;
+  position: relative;
+  /* border:3px solid gold; */
+  cursor: pointer;
 }
 
 .slider-box-1 .navigation-wrapper {
-width: 1200px;
-/* border:3px solid red; */
-margin:0 auto;
-display:flex;
-justify-content:space-between;
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
-z-index:1;
+  width: 1200px;
+  /* border:3px solid red; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .slider-box-1 .swiper-button-prev::after,
 .slider-box-1 .swiper-button-next::after {
-  display:none;
+  display: none;
 }
 
 /* 슬라이드 이미지 비율유지 */
-.slider-box-1 .swiper-slide > img:nth-child(1) {
-  width:100%;
+.slider-box-1 .swiper-slide>img:nth-child(1) {
+  width: 100%;
   height: 100%;
   object-fit: cover;
 }
@@ -206,21 +209,68 @@ z-index:1;
   margin-top: 120px;
 }
 
-.section-1 .section__line > img {
+.section-1 .section__line>img {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
 }
 
-.section-1__item-box .title-iu-pick {
+
+.item-box-1 .title-iu-pick {
   /* border:3px solid blue; */
   text-align: center;
-  margin-top:40px;
+  margin-top: 40px;
 }
 
-.section-1__item-box .title-border {
+.item-box-1 .title-border {
   text-align: left;
-  width:1200px;
+  width: 1200px;
   padding: 0;
-  margin-top: -18px;
+  margin-top: -12px;
+}
+
+.item-box-2 .title-my-pick {
+  /* border:3px solid blue; */
+  text-align: center;
+  margin-top: 40px;
+}
+
+.item-box-2 .title-border {
+  text-align: right;
+  width: 1200px;
+  padding: 0;
+  margin-top: -12px;
+}
+
+.item-wrap {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.item-wrap .img-box {
+  display: inline-block;
+  margin-right: 24px;
+}
+
+.img-box:last-child {
+  margin-right: 0;
+}
+
+.item-wrap .product-name {
+  margin-top: 12px;
+}
+
+.item-wrap .product-name>span {
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  color: #222;
+}
+
+.item-wrap .product-price {
+  font-size: 16px;
+  font-weight: 500;
+  color: #505050;
+  margin-top: 4px;
 }
