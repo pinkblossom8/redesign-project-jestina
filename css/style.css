@@ -200,6 +200,49 @@ header .top-header {
 
 /* section-1 */
 
+.section-1 {
+  position: relative;
+}
+
+/* bg-img 이동 */
+
+.section-1 .bg-img-1 {
+  animation-duration: 5s;
+  animation-name: slidein;
+  position:absolute;
+  top:331px;
+  z-index: -1;
+}
+
+  @keyframes slidein {
+    from {
+      left:-50%;
+    }
+  
+    to {
+      left:0%;
+    }
+  }
+
+.section-1 .bg-img-2 {
+  animation-duration: 5s;
+  animation-name: slidein1;
+  position:absolute;
+  top:874px;
+  right: 0;
+  z-index: -2;
+}
+
+@keyframes slidein1 {
+  from {
+    right:-50%;
+  }
+
+  to {
+    right:0%;
+  }
+}
+
 /* section-line 가운데로 */
 .section-1 .section__line {
   height: 61px;
@@ -274,3 +317,21 @@ header .top-header {
   color: #505050;
   margin-top: 4px;
 }
+
+.section-1 .img-wrap {
+  position: relative;
+}
+
+.section-1 .img-wrap a:last-child {
+  position: absolute;
+  top:0;
+  left:0;
+  display: none;
+}
+
+.section-1 .img-wrap:hover a:last-child {
+  display: block;
+}
+
+
+
