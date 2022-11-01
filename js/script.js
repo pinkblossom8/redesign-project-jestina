@@ -26,21 +26,42 @@ function SliderBox1__init() {
   });
 }
 
-// 스크롤 감지 질문!
+function SliderBox2__init() {
+  const swiper = new Swiper(".slider-box-2 .swiper", {
+    // Optional parameters
+    loop: true,
+    slidesPerView: 3,
+    centeredSlides:true,
+    spaceBetween:-100,
 
-function ScrollBg__init() {
-  // 스크롤 위치 확인 JS
-  $(window).scroll(function () {
-    let height = $(document).scrollTop();
-    console.log(height);
+    scrollbar: {
+      el: ".slider-box-2 .swiper-scrollbar"
+    },
 
-    // 만약 height가 500 이상이라면 함수 실행해라
-    if (height > 800) {
-      $(".bg-img-1").addClass("active");
+    // Navigation arrows
+    navigation: {
+      nextEl: ".slider-box-2 .swiper-button-next",
+      prevEl: ".slider-box-2 .swiper-button-prev"
     }
   });
 }
 
+// 스크롤 감지 질문!
+
+// function ScrollBg__init() {
+//   // 스크롤 위치 확인 JS
+//   $(window).scroll(function () {
+//     let height = $(document).scrollTop();
+//     console.log(height);
+
+//     // 만약 height가 500 이상이라면 함수 실행해라
+//     if (height > 800) {
+//       $(".bg-img-1").addClass("active");
+//     }
+//   });
+// }
+
 SliderBox1__init();
-ScrollBg__init();
+SliderBox2__init();
+// ScrollBg__init();
 AOS.init();
