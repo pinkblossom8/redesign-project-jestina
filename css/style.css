@@ -221,44 +221,6 @@ header .top-header {
   display: block;
 }
 
-/* .section-1 .bg-img-1 {
-  animation-duration: 5s;
-  animation-name: slidein;
-  position:absolute;
-  top:331px;
-  z-index: -1;
-}
-
-  @keyframes slidein {
-    from {
-      left:-50%;
-    }
-  
-    to {
-      left:0%;
-    }
-  }
-
-.section-1 .bg-img-2 {
-  animation-duration: 5s;
-  animation-name: slidein1;
-  position:absolute;
-  top:874px;
-  right: 0;
-  z-index: -2;
-}
-
-@keyframes slidein1 {
-  from {
-    right:-50%;
-  }
-
-  to {
-    right:0%;
-  }
-} */
-
-
 /* section-line 가운데로 */
 .section__line {
   height: 61px;
@@ -319,7 +281,7 @@ header .top-header {
   margin-top: 12px;
 }
 
-.item-wrap .product-name>span {
+.product-name>span {
   display: block;
   text-align: center;
   font-weight: 500;
@@ -327,7 +289,7 @@ header .top-header {
   color: #222;
 }
 
-.item-wrap .product-price {
+.product-price {
   font-size: 16px;
   font-weight: 500;
   color: #505050;
@@ -356,13 +318,13 @@ header .top-header {
 }
 
 .section-2__inner {
-  /* width: 100%; */
   height: 100%;
   margin: 0 auto;
   background-image: url(../img/event-background.png) ;
   background-repeat: no-repeat;
   background-position: center center;
   /* border:3px solid red; */
+  /* overflow: hidden; */
 }
 
 section .title {
@@ -398,10 +360,28 @@ section .title {
   width:1200px;
   text-align: right;
   margin:0 auto;
-  margin-top:156px;
+  margin-top:138px;
 }
 
 /* section-3 */
+.section-3 .bg {
+  position:relative;
+  z-index: -10;
+}
+.section-3 .bg .new-bg-1 {
+  position: absolute;
+  /* border:3px solid blue; */
+  margin-top: -21px;
+  left: 0;
+}
+
+.section-3 .bg img:nth-child(2) {
+  position: absolute;
+  /* border:3px solid gold; */
+  right: 0;
+  margin-top: 680px;
+}
+
 
 .section-3 .title-border {
   text-align: left;
@@ -417,12 +397,19 @@ section .title {
   /* border:3px solid red; */
   text-align:center;
 }
+
+.slider-box-2 .swiper-button-prev::after,
+.slider-box-2 .swiper-button-next::after {
+  display: none;
+}
+
+
 .slider-box-2 {
   /* border:3px solid green; */
   display: inline-block;
   overflow: hidden;
   margin-top: 24px;
-  background-color: rgba(153, 153, 153, 0.05);
+  background-color: rgba(245, 245, 245);
 }
 
 .slider-box-2 .swiper {
@@ -436,9 +423,61 @@ section .title {
 .slider-box-2 .swiper .swiper-slide {
   /* border:3px solid red; */
   width: 100%;
-  height: 100%;
+  height: 560px;
   /* 이미지의 양옆사이즈를 작게 */
   transform: scale(0.8);
+  transition:0.3s;
+  /* hover 이미지 유령의 집 */
+  position: relative;
+}
+
+.slider-box-2 .swiper-slide>a:first-child>img {
+  /* border:3px solid gold; */
+  box-shadow:2px 2px 10px 1px #ccc;
+}
+
+/* hover 이미지 유령화 및 평소에 안보이게 */
+.slider-box-2 .swiper-slide div {
+  /* border:3px solid red; */
+  width: 420px;
+  height: 560px;
+  background-color: rgba(153, 153, 153, 0.2);
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  position:absolute;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.slider-box-2 .swiper-slide a:nth-child(3) {
+  position: absolute;
+  top: 361px;
+  left: 108px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.slider-box-2 .swiper-slide a:last-child {
+  position: absolute;
+  top: 361px;
+  right: 108px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/* hover 하면 보이게 */
+
+.slider-box-2 .swiper-slide:hover div {
+  opacity: 1;
+}
+
+.slider-box-2 .swiper-slide:hover a:nth-child(3) {
+  opacity: 1;
+}
+
+.slider-box-2 .swiper-slide:hover a:last-child {
+  opacity: 1;
 }
 
 .slider-box-2 .swiper .swiper-slide.swiper-slide-active {
@@ -446,6 +485,7 @@ section .title {
   transform: scale(1);
   z-index: 10;
 }
+
 
 .slider-box-2 .swiper-horizontal >.swiper-scrollbar {
   height: 1px;
@@ -456,11 +496,27 @@ section .title {
   /* border:3px solid blue; */
 }
 
+.section-3 .new-all {
+  width:1200px;
+  text-align: right;
+  margin:0 auto;
+  margin-top:48px;
+}
 
+/* section-4 */
+.section-4 .best-wrap {
+  text-align: center;
+}
 
+.section-4 .item-wrap-1 {
+  display: inline-block;
+  border:3px solid red;
+  margin-top: 32px;
+}
 
-
-
-
-
-
+.section-4 .img-box {
+  border:3px solid blue;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
