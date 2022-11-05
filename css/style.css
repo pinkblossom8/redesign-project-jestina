@@ -647,3 +647,37 @@ footer .footer-right .footer-cs {
   margin-top: 4px;
   font-family: 'Noto Sans KR', sans-serif;
 }
+
+footer .quick-menu {
+  position: fixed;
+  z-index: 988;
+  right: calc((100vw - 1200px) / 2 - 150px);
+  bottom:12px;
+}
+
+footer .quick-menu > button {
+  /* border:3px solid red;/ */
+  border:none;
+  padding: 8px;
+  border-radius:24px;
+  background-color: #FFB2B8;
+  width:48px;
+  height: 100%;
+  display: block;
+  margin-bottom : 8px;
+  font-weight: bold;
+}
+
+footer .recently-btn > a {
+  margin-bottom: 12px;
+  /* border:3px solid blue; */
+  display: block;
+  margin-bottom: 8px;
+}
+
+footer .recently-btn .count {
+  /* border:3px solid red; */
+  color:#F06278;
+  font-weight: bold;
+  display: block;
+}

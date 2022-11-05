@@ -46,22 +46,27 @@ function SliderBox2__init() {
   });
 }
 
-// 스크롤 감지 질문!
+function QuickMenu__init () {
+  $(function() {
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 250) {
+        $('.quick-menu').fadeIn();
+      } else {
+        $('.quick-menu').fadeOut();
+      }
+    });
+  
+    $(".top-btn").click(function() {
+      $('html, body').animate({
+        scrollTop : 0
+      }, 400);
+      return false;
+    });
+  });
+}
 
-// function ScrollBg__init() {
-//   // 스크롤 위치 확인 JS
-//   $(window).scroll(function () {
-//     let height = $(document).scrollTop();
-//     console.log(height);
-
-//     // 만약 height가 500 이상이라면 함수 실행해라
-//     if (height > 800) {
-//       $(".bg-img-1").addClass("active");
-//     }
-//   });
-// }
 
 SliderBox1__init();
 SliderBox2__init();
-// ScrollBg__init();
 AOS.init();
+QuickMenu__init ();
