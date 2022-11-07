@@ -49,12 +49,13 @@ function SliderBox2__init() {
 function QuickMenu__init () {
   $(function() {
     $(window).scroll(function() {
-      if ($(this).scrollTop() > 250) {
-        $('.quick-menu').fadeIn();
+      if ($(this).scrollTop() > 280) {
+        $('.quick-menu').addClass('active');
       } else {
-        $('.quick-menu').fadeOut();
+        $('.quick-menu').removeClass('active');
       }
     });
+
   
     $(".top-btn").click(function() {
       $('html, body').animate({

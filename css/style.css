@@ -648,11 +648,19 @@ footer .footer-right .footer-cs {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+/* quick-menu */
+
 footer .quick-menu {
   position: fixed;
   z-index: 988;
   right: calc((100vw - 1200px) / 2 - 150px);
   bottom:12px;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+footer .quick-menu.active {
+  opacity: 1;
 }
 
 footer .quick-menu > button {
@@ -666,6 +674,7 @@ footer .quick-menu > button {
   display: block;
   margin-bottom : 8px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 footer .recently-btn > a {
